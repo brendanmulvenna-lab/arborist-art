@@ -222,6 +222,7 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: var(--bg-page);
     background-image: url('assets/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -311,6 +312,7 @@ section:not(.hero) .container {
 }
 
 #services {
+    background-color: var(--bg-page);
     background-image: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), url('assets/mangrove-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -357,6 +359,7 @@ section:not(.hero) .container {
 }
 
 #about {
+    background-color: var(--bg-sec);
     background-image: linear-gradient(rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), url('assets/about-bg.jpg');
 }
 
@@ -398,6 +401,7 @@ section:not(.hero) .container {
 
 /* Social Proof */
 #portfolios {
+    background-color: var(--bg-page);
     background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/landscape-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -449,7 +453,8 @@ section:not(.hero) .container {
 /* Awards Section */
 #awards-section {
     padding: 100px 0;
-    background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/awards-bg.png');
+    background-color: var(--bg-sec);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/awards-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -481,7 +486,8 @@ section:not(.hero) .container {
 }
 
 #stats-section {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), url('assets/stats-sunset.png');
+    background-color: var(--bg-page);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), url('assets/stats-sunset.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -515,7 +521,8 @@ section:not(.hero) .container {
 
 /* Problem Section */
 #main-content {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('assets/problem-bg-overgrown.png');
+    background-color: var(--bg-page);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('assets/problem-bg-overgrown.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -576,7 +583,8 @@ section:not(.hero) .container {
 }
 
 #solution-section {
-    background-image: linear-gradient(rgba(36, 36, 36, 0.7), rgba(36, 36, 36, 0.7)), url('assets/hoa-palms-boulevard.png');
+    background-color: var(--bg-sec);
+    background-image: linear-gradient(rgba(36, 36, 36, 0.7), rgba(36, 36, 36, 0.7)), url('assets/hoa-palms-boulevard.jpg');
 }
 
 .solution-grid {
@@ -596,6 +604,7 @@ section:not(.hero) .container {
 }
 
 #how-it-works {
+    background-color: var(--bg-page);
     background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/canopy-upward.jpg');
     background-size: cover;
     background-position: center;
@@ -604,6 +613,7 @@ section:not(.hero) .container {
 
 /* Commercial & HOA */
 #commercial-section {
+    background-color: var(--bg-sec);
     background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/commercial-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -684,6 +694,7 @@ section:not(.hero) .container {
 
 /* FAQ Accordion */
 #faq-section {
+    background-color: var(--bg-page);
     background-image: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('assets/bark-texture.jpg');
     background-size: cover;
     background-position: center;
@@ -742,7 +753,8 @@ section:not(.hero) .container {
 /* Social Proof Refinement */
 .testimonial-section {
     position: relative;
-    background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/testimonials-bg.png');
+    background-color: var(--bg-sec);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/testimonials-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -831,7 +843,8 @@ section:not(.hero) .container {
     padding: 120px 0;
     position: relative;
     text-align: center;
-    background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('assets/cta-bg.png');
+    background-color: var(--bg-page);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('assets/cta-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1143,6 +1156,10 @@ select {
     .menu-toggle {
         display: flex;
     }
+
+    .logo-container img {
+        height: 36px !important;
+    }
     
     .menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -1179,6 +1196,10 @@ select {
     .details-column {
         margin-top: 40px;
     }
+
+    .problem-footer {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1200,6 +1221,58 @@ select {
     #awards-section,
     .testimonial-section {
         background-attachment: scroll !important;
+    }
+
+    .hero-overlay {
+        background: rgba(26, 26, 26, 0.5);
+    }
+    
+    .hero h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .hero h1 br {
+        display: none;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .stat-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .stat-value {
+        font-size: 32px;
+    }
+    
+    .awards-badge-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .award-badge img {
+        width: 150px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 32px;
+    }
+
+    .service-area-list {
+        justify-content: center;
     }
 }
 
