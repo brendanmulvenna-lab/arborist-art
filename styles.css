@@ -230,6 +230,16 @@ img {
     padding-top: 90px;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        align-items: flex-start;
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+}
+
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -1228,7 +1238,8 @@ select {
     }
     
     .hero h1 {
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        font-size: clamp(1.5rem, 7vw, 2.2rem);
+        margin-bottom: 20px;
     }
 
     .hero h1 br {
@@ -1236,7 +1247,8 @@ select {
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 15px;
+        margin-bottom: 32px;
     }
 
     .stat-bar {
