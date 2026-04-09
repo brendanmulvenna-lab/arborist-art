@@ -222,7 +222,7 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--bg-page);
+    background-color: #2d2d2d;
     background-image: url('assets/hero.jpg');
     background-size: cover;
     background-position: center;
@@ -237,6 +237,9 @@ img {
         align-items: flex-start;
         padding-top: 140px;
         padding-bottom: 60px;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center center !important;
     }
 }
 
@@ -1229,7 +1232,8 @@ select {
     #stats-section,
     #faq-section,
     #awards-section,
-    .testimonial-section {
+    .testimonial-section,
+    .hero {
         background-attachment: scroll !important;
     }
 
