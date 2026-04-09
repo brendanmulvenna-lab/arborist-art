@@ -408,19 +408,74 @@ section:not(.hero) .container {
 .client-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-bottom: 80px;
+    gap: 32px;
 }
 
-.client-card {
-    background-color: var(--bg-page);
-    padding: 32px;
-    border: 1px solid var(--border-accent);
+.trust-card {
+    background-color: #2d2d2d;
+    padding: 40px 24px;
     text-align: center;
+    border-bottom: 3px solid var(--accent);
+    transition: var(--transition);
+}
+
+.trust-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo-placeholder {
+    height: 100px;
+    background-color: #3a3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-sec);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.trust-card p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Awards Section */
+#awards-section {
+    padding: 100px 0;
+    background-color: #242424;
+}
+
+.awards-badge-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.badge-box {
+    width: 200px;
+    height: 200px;
+    background-color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    font-weight: 700;
+    color: var(--text-sec);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #stats-section {
@@ -458,10 +513,17 @@ section:not(.hero) .container {
 
 /* Problem Section */
 #main-content {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('assets/problem-bg.jpg');
+    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('assets/problem-bg-overgrown.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    #main-content {
+        background-position: center top;
+        background-attachment: scroll; /* Better performance on mobile */
+    }
 }
 
 .problem-grid {
@@ -512,7 +574,7 @@ section:not(.hero) .container {
 }
 
 #solution-section {
-    background-image: linear-gradient(rgba(36, 36, 36, 0.8), rgba(36, 36, 36, 0.8)), url('assets/live-oak-overlay.jpg');
+    background-image: linear-gradient(rgba(36, 36, 36, 0.7), rgba(36, 36, 36, 0.7)), url('assets/hoa-palms-boulevard.png');
 }
 
 .solution-grid {
