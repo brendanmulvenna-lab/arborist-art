@@ -378,7 +378,6 @@ section:not(.hero) .container {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     text-align: center;
-    padding: 20px;
 }
 
 .cert-list {
@@ -450,7 +449,10 @@ section:not(.hero) .container {
 /* Awards Section */
 #awards-section {
     padding: 100px 0;
-    background-color: #242424;
+    background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/awards-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .awards-badge-grid {
@@ -479,7 +481,7 @@ section:not(.hero) .container {
 }
 
 #stats-section {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), url('assets/stats-hero-bg.jpg');
+    background-image: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), url('assets/stats-sunset.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -740,6 +742,10 @@ section:not(.hero) .container {
 /* Social Proof Refinement */
 .testimonial-section {
     position: relative;
+    background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('assets/testimonials-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .testimonial-grid {
@@ -825,8 +831,10 @@ section:not(.hero) .container {
     padding: 120px 0;
     position: relative;
     text-align: center;
+    background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('assets/cta-bg.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .cta-container {
@@ -1188,7 +1196,9 @@ select {
     #commercial-section,
     #portfolios,
     #stats-section,
-    #faq-section {
+    #faq-section,
+    #awards-section,
+    .testimonial-section {
         background-attachment: scroll !important;
     }
 }
