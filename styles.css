@@ -209,13 +209,14 @@ img {
     width: 280px;
     background-color: #2d2d2d;
     border-top: 3px solid var(--accent);
-    padding: 16px 0;
+    border-radius: 0 0 6px 6px;
+    padding: 8px 0;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: var(--transition);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
     z-index: 2000; /* Increased to ensure it overlays all content */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4);
 }
 
 .nav-links li:hover .nav-dropdown {
@@ -231,12 +232,12 @@ img {
 
 .nav-dropdown a {
     display: block;
-    padding: 12px 24px;
-    font-size: 11px !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: var(--transition);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 14px 24px;
+    font-size: 15px !important;
+    font-weight: 400;
+    text-transform: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .nav-dropdown li:last-child a {
@@ -244,8 +245,10 @@ img {
 }
 
 .nav-dropdown a:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--accent) !important;
+    background-color: rgba(255, 255, 255, 0.08); /* slight highlight */
+    color: white !important;
+    border-left: 3px solid var(--accent);
+    padding-left: 21px; /* Adjust padding to accommodate border */
 }
 
 /* Dropdown Chevron */
@@ -313,6 +316,7 @@ img {
         transform: none;
         background: rgba(255,255,255,0.02);
         border: none;
+        border-radius: 0;
         padding: 0;
         display: block;
         box-shadow: none;
@@ -332,23 +336,24 @@ img {
     }
 
     .nav-dropdown a {
-        padding: 16px 24px 16px 40px;
-        font-size: 12px !important;
+        padding: 14px 24px 14px 40px;
+        font-size: 15px !important;
+        font-weight: 400;
+        text-transform: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         color: #B0B0B0 !important;
-        font-family: 'Montserrat', sans-serif;
     }
 
-    .nav-dropdown a:active {
-        color: var(--accent) !important;
-    }
-}
-
-    .nav-dropdown a {
-        padding: 8px 0;
+    .nav-dropdown li:last-child a {
         border-bottom: none;
-        font-size: 11px !important;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+    }
+
+    .nav-dropdown a:active,
+    .nav-dropdown a:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: white !important;
+        border-left: 3px solid var(--accent);
+        padding-left: 37px;
     }
 }
 
