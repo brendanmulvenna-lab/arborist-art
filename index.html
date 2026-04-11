@@ -199,7 +199,17 @@
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#services">Services</a></li>
+                    <li>
+                        <a href="index.html#services">Services</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="tree-trimming.html">Tree Trimming and Pruning</a></li>
+                            <li><a href="tree-removal.html">Tree Removal</a></li>
+                            <li><a href="mangrove-trimming.html">Mangrove Trimming</a></li>
+                            <li><a href="storm-damage.html">Storm Damage</a></li>
+                            <li><a href="stump-grinding.html">Stump Grinding</a></li>
+                            <li><a href="land-clearing.html">Land Clearing</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#contact-form">Get Started</a></li>
                 </ul>
@@ -244,12 +254,9 @@
             <div class="problem-grid">
                 <div class="problem-card">
                     <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 40px; height: 40px;">
-                            <!-- Tree -->
-                            <path d="M12 2L19 12H15V22H9V12H5L12 2Z" />
-                            <!-- Warning Triangle -->
-                            <path d="M12 9L15 15H9L12 9Z" stroke="var(--accent)" fill="var(--accent)" />
-                            <path d="M10.29 18L1.82 18a2 2 0 011.71-3h16.94a2 2 0 011.71 3L13.71 3.86a2 2 0 00-3.42 0z" />
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px;">
+                            <path d="M12 22v-5M9 17l3-3 3 3M17 14l-5-5-5 5M12 9V2"/>
+                            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#56C45C" />
                         </svg>
                     </div>
                     <p>Unqualified crews damaging trees across your community</p>
@@ -257,13 +264,10 @@
                 
                 <div class="problem-card">
                     <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 40px; height: 40px;">
-                            <!-- Person Silhouette -->
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                            <!-- Question Mark -->
-                            <path d="M12 11h.01" stroke="var(--accent)"></path>
-                            <path d="M12 17v-2a2 2 0 1 1 2 2h-2"></path>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px;">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                            <path d="M9 12l6 6M15 12l-6 6" stroke="#56C45C"/>
                         </svg>
                     </div>
                     <p>No certified arborist overseeing the work on your properties</p>
@@ -271,13 +275,12 @@
 
                 <div class="problem-card">
                     <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width: 40px; height: 40px;">
-                            <!-- Sparse/Dead Tree -->
-                            <path d="M12 22V12"></path>
-                            <path d="M12 12l5-5"></path>
-                            <path d="M12 15l-5-5"></path>
-                            <path d="M12 10l3-3"></path>
-                            <path d="M12 8l-3-3"></path>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 48px; height: 48px;">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                            <path d="M9.09 14a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 21h.01" stroke="#56C45C"/>
                         </svg>
                     </div>
                     <p>Vendors with no long-term plan for your tree canopy</p>
@@ -373,6 +376,7 @@
                     <div class="step-number">1</div>
                     <h3>Call or Request Online</h3>
                     <p>Reach out for a complimentary community assessment. We respond within one business day.</p>
+                    <a href="#contact-form" class="btn btn-primary" style="padding: 10px 20px; font-size: 11px; margin-top: 16px;">Get Started</a>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
@@ -502,26 +506,49 @@
         <div class="container">
             <div class="stat-bar" style="margin-bottom: 60px;">
                 <div class="stat-item">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     <span class="stat-value">25+</span>
                     <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat-item">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-6 5 2 7-6-5-6 5 2-7-6-5h7z"/></svg>
                     <span class="stat-value">6</span>
                     <span class="stat-label">Professional Certifications</span>
                 </div>
                 <div class="stat-item">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                     <span class="stat-value">5-Star</span>
                     <span class="stat-label">Google Rating</span>
                 </div>
                 <div class="stat-item">
+                    <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
                     <span class="stat-value">Multi-Year</span>
                     <span class="stat-label">Contracts</span>
                 </div>
             </div>
 
             <div class="google-badge-container">
-                <img src="assets/google-review-badge.png" alt="5-Star Google Reviews for Arborist Art in Sarasota Florida" class="google-badge" loading="lazy" width="200" height="80">
-                <p>Read our reviews on Google</p>
+                <div class="google-review-badge">
+                    <div class="g-logo">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"/>
+                        </svg>
+                    </div>
+                    <div class="rating-info">
+                        <span class="rating-value">5.0</span>
+                        <div class="stars">
+                            <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <span class="review-count">Google Reviews</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -532,15 +559,9 @@
             </div>
             
             <div class="awards-badge-grid">
-                <div class="award-badge">
-                    <img src="assets/bofl-2023.png" alt="Best of Florida 2023 Regional Winner" width="200" height="200" style="height: auto;" loading="lazy">
-                </div>
-                <div class="award-badge">
-                    <img src="assets/bofl-2024.png" alt="Best of Florida 2024 Winner" width="200" height="200" style="height: auto;" loading="lazy">
-                </div>
-                <div class="award-badge">
-                    <img src="assets/bofl-2025.png" alt="Best of Florida 2025 Winner" width="200" height="200" style="height: auto;" loading="lazy">
-                </div>
+                <div class="award-badge" aria-label="Best of Florida 2023 Regional Winner"></div>
+                <div class="award-badge" aria-label="Best of Florida 2024 Winner"></div>
+                <div class="award-badge" aria-label="Best of Florida 2025 Winner"></div>
             </div>
             
             <p style="margin-top: 40px; color: var(--text-sec); font-size: 16px;">Recognized by GuidetoFlorida.com for outstanding tree care in the Bradenton and Sarasota region.</p>
@@ -756,9 +777,9 @@
         <div class="container" style="padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: center;">
             <p style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #B0B0B0; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px; font-size: 14px;">Voted Sarasota's Best of Florida 2023, 2024, & 2025</p>
             <div style="display: flex; justify-content: center; gap: 40px; align-items: center; flex-wrap: wrap; margin-bottom: 16px;">
-                <img src="assets/bofl-2023.png" alt="Best of Florida 2023 Award" style="width: 100px; height: auto;">
-                <img src="assets/bofl-2024.png" alt="Best of Florida 2024 Award" style="width: 100px; height: auto;">
-                <img src="assets/bofl-2025.png" alt="Best of Florida 2025 Award" style="width: 100px; height: auto;">
+                <div class="award-badge award-badge-small" style="width: 80px; height: 80px; padding: 10px;" aria-label="Best of Florida 2023 Award"></div>
+                <div class="award-badge award-badge-small" style="width: 80px; height: 80px; padding: 10px;" aria-label="Best of Florida 2024 Award"></div>
+                <div class="award-badge award-badge-small" style="width: 80px; height: 80px; padding: 10px;" aria-label="Best of Florida 2025 Award"></div>
             </div>
         </div>
         <div class="container footer-main">

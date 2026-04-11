@@ -169,6 +169,12 @@ img {
     gap: 32px;
 }
 
+.nav-links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .nav-links a {
     font-size: 13px;
     font-weight: 500;
@@ -178,6 +184,89 @@ img {
 
 .nav-links a:hover {
     color: var(--accent);
+}
+
+/* Dropdown Menu */
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    width: 280px;
+    background-color: #2d2d2d;
+    border-top: 3px solid var(--accent);
+    padding: 16px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.nav-links li:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown li {
+    padding: 0;
+    display: block;
+}
+
+.nav-dropdown a {
+    display: block;
+    padding: 12px 24px;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-dropdown li:last-child a {
+    border-bottom: none;
+}
+
+.nav-dropdown a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent) !important;
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-page);
+        padding: 40px 24px;
+        border-bottom: 1px solid var(--border-accent);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-dropdown {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        border: none;
+        padding: 0 0 0 20px;
+        display: block;
+        box-shadow: none;
+    }
+
+    .nav-dropdown a {
+        padding: 10px 0;
+        border-bottom: none;
+    }
 }
 
 .nav-phone {
@@ -326,7 +415,7 @@ section:not(.hero) .container {
 
 #services {
     background-color: var(--bg-page);
-    background-image: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), url('assets/mangrove-bg.jpg');
+    background-image: linear-gradient(rgba(26, 26, 26, 0.75), rgba(26, 26, 26, 0.75)), url('assets/hoa-palms-boulevard.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -797,7 +886,132 @@ section:not(.hero) .container {
     transform: translateY(-5px);
     border-left-color: #FFFFFF;
 }
+/* Authority Badging Components */
+.google-badge-container {
+    text-align: center;
+    margin-top: 40px;
+}
 
+.google-review-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.rating-info {
+    text-align: left;
+}
+
+.rating-value {
+    color: #333;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-right: 4px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+    margin: 4px 0;
+}
+
+.star {
+    width: 14px;
+    height: 14px;
+    fill: #fbbc05;
+}
+
+.review-count {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Best of Florida Medallion Fallbacks */
+.awards-badge-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.award-badge {
+    background: #2d2d2d;
+    border: 1px solid var(--border-accent);
+    padding: 30px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%; /* Medallion shape */
+    transition: var(--transition);
+    position: relative;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+.award-badge:hover {
+    border-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.award-badge::before {
+    content: "BEST OF FLORIDA";
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.award-badge::after {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: white;
+    margin-top: 5px;
+}
+
+.award-badge:nth-child(1)::after { content: "2023"; }
+.award-badge:nth-child(2)::after { content: "2024"; }
+.award-badge:nth-child(3)::after { content: "2025"; }
+
+.award-badge-small {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.award-badge-small::before {
+    font-size: 6px;
+    letter-spacing: 0;
+}
+
+.award-badge-small::after {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+/* Premium Icon Sizing */
+.stat-item .stat-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 16px;
+    display: block;
+    color: white;
+}
 .quote-mark {
     font-size: 80px;
     color: var(--accent);
