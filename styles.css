@@ -127,6 +127,19 @@ img {
     box-shadow: 0 0 20px rgba(86, 196, 92, 0.3);
 }
 
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(86, 196, 92, 0.2);
+}
+
 /* Navbar */
 .navbar {
     position: fixed;
@@ -155,7 +168,9 @@ img {
 
 .logo-container img {
     height: 48px;
+    max-height: 48px;
     width: auto;
+    object-fit: contain;
 }
 
 .nav-right {
@@ -199,7 +214,7 @@ img {
     visibility: hidden;
     transform: translateY(10px);
     transition: var(--transition);
-    z-index: 1000;
+    z-index: 2000; /* Increased to ensure it overlays all content */
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
@@ -233,6 +248,20 @@ img {
     color: var(--accent) !important;
 }
 
+/* Dropdown Arrow/Icon */
+.dropdown-icon {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 14px;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.dropdown-toggle.active .dropdown-icon {
+    transform: rotate(45deg); /* Plus becomes an X or similar rotation */
+}
+
 @media (max-width: 992px) {
     .nav-links {
         display: none;
@@ -253,19 +282,32 @@ img {
     .nav-dropdown {
         position: static;
         width: 100%;
-        opacity: 1;
-        visibility: visible;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
         transform: none;
         background: transparent;
         border: none;
-        padding: 0 0 0 20px;
+        padding: 0;
         display: block;
         box-shadow: none;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    .nav-dropdown.active {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        padding: 10px 0 10px 24px;
     }
 
     .nav-dropdown a {
-        padding: 10px 0;
+        padding: 8px 0;
         border-bottom: none;
+        font-size: 11px !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 }
 
@@ -795,12 +837,8 @@ section:not(.hero) .container {
 }
 
 /* FAQ Accordion */
-#faq-section {
-    background-color: var(--bg-page);
-    background-image: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('assets/bark-texture.jpg');
-    background-size: cover;
-    background-position: center;
     background-attachment: fixed;
+    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('assets/bark-texture.jpg');
 }
 
 .faq-list {
@@ -1095,9 +1133,23 @@ section:not(.hero) .container {
 
 .cta-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .hero-actions, .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+    }
+    
+    .hero-actions .btn, .cta-buttons .btn {
+        width: 100%;
+    }
 }
 
 .cta-secondary {
@@ -1416,7 +1468,7 @@ select {
         gap: 8px;
     }
 
-    .services-grid, .client-grid, .problem-grid, .steps-grid, .testimonial-grid, .contact-grid, .form-row {
+    .services-grid, .client-grid, .problem-grid, .steps-grid, .testimonial-grid, .contact-grid, .form-row, .stat-bar, .stats-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1470,8 +1522,8 @@ select {
     }
 
     .stat-bar {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .stat-value {
@@ -1504,5 +1556,13 @@ select {
     .service-area-list {
         justify-content: center;
     }
+}
+
+/* Footer Logo Standardization */
+.footer-col img:first-child {
+    max-height: 48px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 24px;
 }
 

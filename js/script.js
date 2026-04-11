@@ -16,8 +16,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when a link is clicked
-        const links = navLinks.querySelectorAll('a');
+        // Mobile Dropdown Toggle (Services)
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    const dropdown = toggle.nextElementSibling;
+                    const isActive = toggle.classList.contains('active');
+                    
+                    // Close other mobile dropdowns if any
+                    dropdownToggles.forEach(otherToggle => {
+                        if (otherToggle !== toggle) {
+                            otherToggle.classList.remove('active');
+                            if (otherToggle.nextElementSibling) {
+                                otherToggle.nextElementSibling.classList.remove('active');
+                            }
+                        }
+                    });
+
+                    // Toggle current
+                    toggle.classList.toggle('active');
+                    if (dropdown) {
+                        dropdown.classList.toggle('active');
+                    }
+                }
+            });
+        });
+
+        // Close menu when a standard link is clicked (excluding dropdown toggles)
+        const links = navLinks.querySelectorAll('a:not(.dropdown-toggle)');
         links.forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');

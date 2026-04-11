@@ -120,14 +120,14 @@
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="container nav-content">
                 <a href="index.html" class="logo-container" aria-label="Arborist Art Home">
-                    <img src="logo.png" alt="Arborist Art Logo Sarasota Florida" width="180" height="48">
+                    <img src="Color logo with background.png" alt="Arborist Art Logo Sarasota Florida" width="180" height="48">
                 </a>
                 
                 <div class="nav-right">
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
-                        <li>
-                            <a href="index.html#services">Services</a>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <span class="dropdown-icon">+</span></a>
                             <ul class="nav-dropdown">
                                 <li><a href="tree-trimming.html">Tree Trimming and Pruning</a></li>
                                 <li><a href="tree-removal.html">Tree Removal</a></li>
@@ -158,7 +158,7 @@
                 <p>Selective clearing that protects the trees worth saving and removes everything else.</p>
                 <div class="hero-actions">
                     <a href="#contact-form" class="btn btn-primary">Request a Clearing Assessment</a>
-                    <a href="tel:9412333976" class="hero-sub-cta" style="font-weight: 700; font-size: 18px; text-decoration: none;">Call Now: 941-233-3976</a>
+                    <a href="tel:9412333976" class="btn btn-outline" aria-label="Call Sarasota Arborist Art">Call 941-233-3976</a>
                 </div>
                 <div class="hero-cert-line">
                     Certified Arborist FL-6189A | Selective Clearing | Tree Preservation
@@ -186,7 +186,7 @@
                     <h2>Land Clearing Services</h2>
                 </div>
                 
-                <div class="services-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="services-grid">
                     <div class="service-card">
                         <div>
                             <h3>New Phase Development</h3>
@@ -221,7 +221,7 @@
                 <div class="section-header text-center">
                     <h2 style="margin-bottom: 60px;">Preserve What Matters</h2>
                 </div>
-                <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="stats-grid">
                     <div class="stat-item" style="text-align: center;">
                         <h3 style="color: var(--accent); font-size: 18px; margin-bottom: 20px;">Arborist-Led Planning</h3>
                         <p style="color: #B0B0B0; font-size: 15px;">Tyler evaluates every tree on the site before a single cut is made. Your developer gets a clear map of what stays and what goes.</p>
@@ -269,29 +269,44 @@
             </div>
 
             <!-- Subsection B: FAQ -->
-            <div class="container">
+            <div id="faq-section" class="container">
                 <div class="section-header text-center">
                     <h2>Land Clearing Questions</h2>
                 </div>
                 <div class="faq-list">
                     <div class="faq-item">
-                        <button class="faq-question">Can you clear around trees we want to keep? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can you clear around trees we want to keep?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
                         <div class="faq-answer"><div class="faq-answer-inner">Yes. That is our specialty. Tyler tags every tree to be preserved, and we protect root zones during the clearing process. After clearing, preserved trees are pruned and inspected for any damage.</div></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">Do you handle permits for land clearing? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Do you handle permits for land clearing?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
                         <div class="faq-answer"><div class="faq-answer-inner">Yes. Many municipalities require permits for clearing, especially when protected species are involved. We manage the permitting process for your community or developer.</div></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">What do you do with the cleared vegetation? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What do you do with the cleared vegetation?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
                         <div class="faq-answer"><div class="faq-answer-inner">All cleared brush, trees, and debris are hauled off site. We leave the lot clean and ready for the next phase of construction or landscaping.</div></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">Can you clear invasive species from common areas? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can you clear invasive species from common areas?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
                         <div class="faq-answer"><div class="faq-answer-inner">Yes. We identify and remove invasive species like Brazilian Pepper, Australian Pine, and Melaleuca while preserving native Florida species your community wants to keep.</div></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">Do you work with developers? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Do you work with developers?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
                         <div class="faq-answer"><div class="faq-answer-inner">Yes. We coordinate directly with developers, general contractors, and community association boards on clearing projects for new phases and community improvements.</div></div>
                     </div>
                 </div>
@@ -303,9 +318,9 @@
             <div class="container cta-container">
                 <h2>Clear the Right Way. Protect What Matters.</h2>
                 <p>Tyler will evaluate your site and build a selective clearing plan. No cost, no obligation.</p>
-                <div class="cta-actions">
+                <div class="cta-buttons">
                     <a href="#contact-form" class="btn btn-primary">Request a Clearing Assessment</a>
-                    <a href="tel:9412333976" style="display: block; margin-top: 24px; color: white; font-family: 'Montserrat', sans-serif; font-weight: 700;">Or call us now: 941-233-3976</a>
+                    <a href="tel:9412333976" class="btn btn-outline" aria-label="Call Sarasota Arborist Art at 9-4-1-2-3-3-3-9-7-6">Call 941-233-3976</a>
                 </div>
             </div>
         </section>
@@ -376,14 +391,14 @@
         <div class="container" style="padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: center;">
             <p style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #B0B0B0; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px; font-size: 14px;">Voted Sarasota's Best of Florida 2023, 2024, & 2025</p>
             <div style="display: flex; justify-content: center; gap: 40px; align-items: center; flex-wrap: wrap; margin-bottom: 16px;">
-                <div class="award-badge award-badge-small" style="width: 80px; height: 80px; padding: 10px;" aria-label="Best of Florida 2023 Award"></div>
-                <div class="award-badge award-badge-small" style="width: 80px; height: 80px; padding: 10px;" aria-label="Best of Florida 2024 Award"></div>
-                <div class="award-badge award-badge-small" style="width: 80px; height: 80px; padding: 10px;" aria-label="Best of Florida 2025 Award"></div>
+                <img src="assets/bofl-2023.png" alt="Best of Florida 2023 Award" style="width: 120px;">
+                <img src="assets/bofl-2024.png" alt="Best of Florida 2024 Award" style="width: 120px;">
+                <img src="assets/bofl-2025.png" alt="Best of Florida 2025 Award" style="width: 120px;">
             </div>
         </div>
         <div class="container footer-main">
             <div class="footer-col">
-                <img src="logo.png" alt="Arborist Art Logo Sarasota Florida" loading="lazy" style="max-height: 48px; width: auto; object-fit: contain; margin-bottom: 24px;">
+                <img src="Color logo with background.png" alt="Arborist Art Logo Sarasota Florida" loading="lazy">
                 <p><strong>Arborist Art, LLC</strong></p>
                 <p style="font-style: italic;">"Boast About Your Trees"</p>
             </div>
