@@ -558,11 +558,26 @@ section:not(.hero) .container {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 80px;
+    align-items: stretch; /* Changed from center to stretch to match columns heights */
+}
+
+.solution-image, .compliance-image {
+    min-height: 0; /* Prevents intrinsic image height from inflating grid row */
+    height: 100%;
+    display: flex;
     align-items: center;
+}
+
+.solution-image img, .compliance-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .photo-placeholder {
     aspect-ratio: 4/5;
+    align-self: center; /* Ensures it does not stretch with the about-grid */
     background-color: var(--bg-sec);
     display: flex;
     align-items: center;
@@ -1456,6 +1471,10 @@ select {
     .about-grid, .footer-main {
         grid-template-columns: 1fr;
         gap: 48px;
+    }
+    
+    .solution-image img, .compliance-image img {
+        max-height: 400px;
     }
     
     .problem-grid, .steps-grid, .testimonial-grid, .stat-bar {
