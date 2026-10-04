@@ -633,18 +633,17 @@ section:not(.hero) .container {
 }
 
 .logo-placeholder {
-    height: 100px;
-    background-color: #3a3a3a;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-sec);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     margin-bottom: 24px;
 }
+
+.community-logo-img { display: block; width: 100%; max-width: 300px; height: auto; margin: 0 auto; border-radius: 8px; }
+
+.client-grid .logo-placeholder .community-logo-img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: contain; position: static; top: auto; left: auto; transform: none; margin: 0 auto; border-radius: 8px; }
+.client-grid .trust-card { background-color: transparent; padding: 0; border-bottom: none; border-radius: 8px; }
+.client-grid .logo-placeholder { margin-bottom: 0; }
 
 .trust-card p {
     font-family: 'Montserrat', sans-serif;
