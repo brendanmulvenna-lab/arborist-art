@@ -713,6 +713,7 @@ section:not(.hero) .container {
     border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.05);
 }
+#stats-section .stat-bar { grid-template-columns: repeat(3, 1fr); }
 
 .stat-item {
     text-align: center;
@@ -1661,4 +1662,5 @@ select {
     object-fit: contain;
     margin-bottom: 24px;
 }
+@media (max-width: 768px) { #stats-section .stat-bar { grid-template-columns: 1fr; } }
 
